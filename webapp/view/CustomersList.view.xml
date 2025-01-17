@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="stk.starterkit3.controller.CustomersList" displayBlock="true">
+    <!-- <Shell id="id2Shell">
+        <App id="id2MyApp">
+            <pages> -->
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" title="{i18n>companyList}" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <content>
+            <HeaderContainer class="greenBackground">
+                <Button text="{i18n>createCustomer}" press="onCustomerCreateButton" class="buttonCreate" />
+                <Button text="List Employees" press="onListEmployeesButton" />
+            </HeaderContainer>
+
+
+            <Table id="idCustomerTable" items="{path: '/Customers'}" class="buttonHover">
+                <columns>
+                    <Column id="idNameColumn">
+                        <Label id="idNameLabel" text="{i18n>companyName}"/>
+                    </Column>
+                    <Column id="idCountryColumn">
+                        <Label id="idCountryLabel" text="{i18n>country}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="idCILList" type="Navigation" press="onCustomerPress">
+                        <Text id="idNameText" text="{CompanyName}"/>
+                        <Text id="idCountryText" text="{Country}"/>
+                    </ColumnListItem>
+                    <!-- <ColumnListItem id="Navigation" press="onCustomerPress"></ColumnListItem> -->
+                </items>
+            </Table>
+        </content>
+
+        <!-- <headerContent> -->
+
+        <!-- <Button text="{i18n>createCustomer}" press="onCustomerCreateButton" class="sapUIMediumLargeEnd sapUITinyMarginBottom" /> -->
+
+        <!-- </headerContent> -->
+
+    </Page>
+    <!-- </pages>
+        </App>
+    </Shell> -->
+
+</mvc:View>

@@ -1,0 +1,52 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="stk.starterkit3.controller.CreateCustomer" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CreateCustomer" title="{i18n>createCustomer}" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <!-- <form:Form id="idCreateForm" title="{i18n>createCustomer}" editable="true">
+            <form:formContainers>
+                <form:FormContainer>
+                    <form:FormElement label="Customer ID">
+                        <form:fields>
+                            <Label text="Customer ID"/>
+                            <Input id="customerID"/>
+                        </form:fields>
+                    </form:FormElement>
+                    <form:FormElement label="Customer Name">
+                        <form:fields>
+                            <Input id="customerName"/>
+                        </form:fields>
+                    </form:FormElement>
+                </form:FormContainer>
+            </form:formContainers>
+        </form:Form>
+    <content>
+        <Input xmlns="sap.m" id="cutomerID"/>
+    </content> -->
+    <content>
+        <form:Form editable="true" id="idFormCreate">
+            <form:formContainers>
+                <form:FormContainer id="container0">
+                    <form:formElements>
+                        <form:FormElement label="Customer ID" id="element0">
+                            <form:fields>
+                                <Input width="100%" id="customerIdInput"/>
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:form="sap.ui.layout.form" label="Customer Name" id="customerName">
+                            <form:fields>
+                                <Input width="100%" id="customerNameInput"/>
+                                
+                            </form:fields>
+                            
+                        </form:FormElement>
+                    </form:formElements>
+                </form:FormContainer>
+            </form:formContainers>
+            <form:layout>
+                <form:ResponsiveGridLayout id="layout0"/>
+            </form:layout></form:Form>
+    </content>
+    <headerContent>
+        <Button xmlns="sap.m" text="Create" id="createCustomerButton" press="onCreateCustomerButton"/>
+    </headerContent>
+    </Page>
+
+</mvc:View>

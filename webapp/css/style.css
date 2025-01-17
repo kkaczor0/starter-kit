@@ -1,0 +1,16 @@
+/* Enter your custom styles here */
+.greenBackground {
+    background-color: #CBF2C4;
+}
+
+.buttonCreate{
+    color: blanchedalmond !important;
+}
+
+.buttonHover tr:hover span{
+    color:#CBF2C4 !important;
+}
+
+table tr:nth-of-type(odd) {
+    background-color: #ccc;
+  }

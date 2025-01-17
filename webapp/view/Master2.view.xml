@@ -1,0 +1,40 @@
+<mvc:View controllerName="stk.starterkit3.controller.Master2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Shell id="idShell">
+        <App id="idMyApp">
+            <pages>
+                <!-- <Page id="idPage" title="{i18n>title}">
+                    <content>
+                        <Carousel id="idCarousel" width="20%" height="30%">
+                            <Image id="idImage" width="90%" height="90%" src="https://www.creativefabrica.com/wp-content/uploads/2019/10/14/Ho-Ho-Ho-580x386.jpg" />
+                            <Image id="id2Image" width="90%" height="90%" src="https://static.vecteezy.com/system/resources/previews/000/237/133/original/christmas-background-vector.jpg" />
+                            <Image id="id3Image" width="90%" height="90%" src="https://static.vecteezy.com/system/resources/previews/000/270/919/original/merry-christmas-vector.jpg" />
+                            <customLayout>
+                                <CarouselLayout id="idCarouselLayout" visiblePagesCount="2"></CarouselLayout>
+                            </customLayout>
+                        </Carousel>
+                        <Table id="idTable" items="{/Customers}">
+                            <columns>
+                                <Column id="id1Column">
+                                    <Label id="id1Label" text="{i18n>companyName}"></Label>
+                                </Column>
+                                <Column id="id2Column">
+                                    <Label id="id2Label" text="{i18n>country}"></Label>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="idCIL">
+                                    <Text id="id1Text" text="{CompanyName}"></Text>
+                                    <Text id="id2Text" text="{Country}"></Text>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Page> -->
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
+

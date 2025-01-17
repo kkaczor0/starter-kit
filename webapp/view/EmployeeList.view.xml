@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="stk.starterkit3.controller.EmployeeList" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="EmployeeList" title="{i18n>companyList}" >
+        <content>
+
+            <Table id="idEmployeeTable" items="{path: '/Employees'}">
+                <columns>
+                    <Column>
+                        <Label text="{i18n>name}"/>
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>position}"/>
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>orders}"/>
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>actions}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onEmployeePress">
+                        <Text text="{FirstName} {LastName}"/>
+                        <Text text="{Title}"/>
+                        <!-- <Text text="{Orders}"/> -->
+                        <Text text="{path: 'Orders', formatter: '.formatter.formatOrders'}" />
+                        <FlexBox>
+                            <Button text="Motivate" press="onMotivate"></Button>
+                            <Button text="Fire"></Button>
+                        </FlexBox>
+                    </ColumnListItem>
+                    <!-- <ColumnListItem id="Navigation" press="onCustomerPress"></ColumnListItem> -->
+                </items>
+            </Table>
+        </content>
+
+        <!-- <headerContent> -->
+
+        <!-- <Button text="{i18n>createCustomer}" press="onCustomerCreateButton" class="sapUIMediumLargeEnd sapUITinyMarginBottom" /> -->
+
+        <!-- </headerContent> -->
+
+    </Page>
+    <!-- </pages>
+        </App>
+    </Shell> -->
+
+</mvc:View>

@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit3.controller.CustomerDetails" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails" title="{CompanyName}" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <!-- <Text id="idContactNameText" text="{ContactName} {Address} {City} {Phone}"></Text> -->
+        <Table id="idCOrderTable" items="{path: 'Orders'}">
+            <!-- items="{path: '/Customers', parameters:{select: 'CompanyName,Country,CustomerID,ContactName,City,Address,Phone'}}"> -->
+            <columns>
+                <Column id="idOrderIDColumn">
+                    <Label id="idOrderIDLabel" text="{i18n>orderID}"/>
+                </Column>
+                <Column id="idEmployeeColumn">
+                    <Label id="idEmployeeLabel" text="{i18n>employee}"/>
+                </Column>
+                <Column id="idDateColumn">
+                    <Label id="idDateLabel" text="{i18n>date}"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="idCIL2List">
+                    <Text id="idOrderIDText" text="{OrderID}"/>
+                    <Text id="idEmployeeText" text="{parts: [{path: 'Employee/FirstName'},{path: 'Employee/LastName'}], formatter: '.formatter.formatName'}"/>
+                    <Text id="idDateText" text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style: 'medium'}}"/>
+                </ColumnListItem>
+                <!-- <ColumnListItem id="Navigation" press="onCustomerPress"></ColumnListItem> -->
+            </items>
+        </Table>
+    <headerContent>
+        <Button xmlns="sap.m" text="Show contact info" id="idButton" press="onPress" />
+    </headerContent>
+    </Page>
+
+</mvc:View>

@@ -1,0 +1,29 @@
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core">
+    <Dialog id="idDialog" title="{i18n>contactDetails}">
+        <content>
+
+            <!-- <form:SimpleForm id="SimpleFormDisplay" editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"> -->
+            <form:SimpleForm id="SimpleFormDisplay">
+                <form:content>
+                    <Label text="{i18n>contactName}" wrapping="true" />
+                    <Text text="{ContactName}" />
+
+                    <Label text="{i18n>contactTitle}" />
+                    <Text text="{ContactTitle}" />
+
+                    <Label text="{i18n>address}" />
+                    <Text text="{Address}" />
+
+                    <Label text="{i18n>phone}" />
+                    <Text text="{Phone}" />
+
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <endButton>
+            <Button id="idCloseButton" text="{i18n>closeText}" press="onButtonClosePress"></Button>
+        </endButton>
+    </Dialog>
+</c:FragmentDefinition>
