@@ -18,7 +18,7 @@ server:
         backend:
           - path: /V2
             url: https://services.odata.org
-          - path: /evilinsult/generate_insult.php
+          - path: /generate_insult.php
             url: https://evilinsult.com
             destination: evilinsult
     - name: fiori-tools-appreload

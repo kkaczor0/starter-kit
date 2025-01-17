@@ -26,7 +26,7 @@ sap.ui.define([
 
             var oModel = new sap.ui.model.json.JSONModel();
             this.getView().setModel(oModel, "motivationalModel");
-            oModel.loadData("/evilinsult/generate_insult.php", {
+            oModel.loadData("/generate_insult.php", {
                 lang: "en",
                 type: "json"
             }).then(function () { 
